@@ -1,0 +1,31 @@
+#! /bin/sh
+#
+#Copyright (c) 2013 Qualcomm Technologies, Inc.  All Rights Reserved.
+#Qualcomm Technologies Proprietary and Confidential.
+
+# Location launcher service  init.d script to start the Location Software's mcmlocserver daemon
+
+set -e
+
+case "$1" in
+  start)
+        echo -n "Starting Location Launcher Services: "
+        start-stop-daemon -S -b -a /usr/bin/loc_launcher
+        echo "done"
+        ;;
+  stop)
+        echo -n "Stopping Location launcher Services: "
+        start-stop-daemon -K -n loc_launcher
+        echo "done"
+        ;;
+  restart)
+        $0 stop
+        $0 start
+        ;;
+  *)
+        echo "Usage loc_launcher { start | stop | restart}" >&2
+        exit 1
+        ;;
+esac
+
+exit 0

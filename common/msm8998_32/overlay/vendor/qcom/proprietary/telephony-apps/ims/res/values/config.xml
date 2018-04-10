@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2016 Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Camera2 API based implementation will be used if the flag is set to true. !-->
+    <bool name="config_use_camera2" translatable="false">true</bool>
+
+    <!-- Used to determine if rotation needs to be calculated by the AP-side !-->
+    <bool name="config_device_calculate_rotation" translatable="false">false</bool>
+</resources>
+

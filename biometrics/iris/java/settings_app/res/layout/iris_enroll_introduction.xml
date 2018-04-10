@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (c) 2015 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+  -->
+
+<com.android.setupwizardlib.SetupWizardLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/setup_wizard_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="?attr/fingerprint_layout_theme">
+
+    <LinearLayout
+        style="@style/SuwContentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clipToPadding="false"
+        android:clipChildren="false">
+
+        <TextView
+            style="@style/TextAppearance.IrisMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/suw_description_margin_top"
+            android:text="@string/security_settings_iris_enroll_introduction_message"/>
+
+        <TextView
+            style="@style/TextAppearance.IrisMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/security_settings_iris_enroll_introduction_message_warning"/>
+
+        <TextView
+            style="@style/TextAppearance.IrisLink"
+            android:id="@+id/learn_more_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/security_settings_iris_enroll_introduction_risk_link_text"/>
+
+        <View
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/button_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="-12dp"
+            android:layout_marginBottom="4dp"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/Button.IrisButton"
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/security_settings_iris_enroll_introduction_cancel" />
+
+            <Button
+                style="@style/Button.FingerprintButton"
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end|center_vertical"
+                android:text="@string/security_settings_iris_enroll_introduction_continue" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.android.setupwizardlib.SetupWizardLayout>

@@ -1,0 +1,66 @@
+<!--
+Copyright (c) 2015 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<resources>
+    <string name="app_name">MdtpDemo</string>
+    <string name="user_app">MDTP User App: Main Screen</string>
+    <string name="config_app">MDTP User App: Configuration</string>
+    <string name="server_app">MDTP Server: Main Screen</string>
+    <string name="action_settings">Settings</string>
+    <string name="label_1_1">MDTP State:</string>
+    <string name="state_deactivated">Deactivated</string>
+    <string name="state_activated">Activated</string>
+    <string name="configuration">Configuration (only before activation)</string>
+    <string name="service_activate">Request MDTP activation from MDTP services</string>
+    <string name="service_deactivate">Request MDTP deactivation from MDTP services</string>
+    <string name="local_deactivate">Local MDTP deactivation (using PIN)</string>
+    <string name="service_console">MDTP Services console</string>
+    <string name="title_activity_configuration">User Configuration</string>
+    <string name="label_2_1">Use Local PIN:</string>
+    <string name="label_2_2">PIN:</string>
+    <string name="gen_rand_pin">Generate Random  PIN</string>
+    <string name="label_2_3">Verification Ratio:</string>
+    <string name="label_2_5">Enable SIM Lock:</string>
+    <string name="label_2_6">Additional files/directories to verify:</string>
+    <string name="reset">Reset to defaults</string>
+    <string name="label_3_1">Send commands from "server" to device:</string>
+    <string name="activate">Activate</string>
+    <string name="deactivate">Deactivate</string>
+    <string name="locksim">Lock SIM</string>
+    <string name="unlocksim">Unlock SIM</string>
+    <string name="killfunc">Kill functionality</string>
+    <string name="restorefunc">Restore functionality</string>
+    <string name="label_3_2">Requests for MDTP deactivation:</string>
+    <string name="notallowed">Not allowed</string>
+    <string name="allowed">Allowed</string>
+    <string name="label_3_3">Requests for SetupWizard unblocking:</string>
+    <string name="label_3_4">Service Log:</string>
+    <string name="wizard_app_loading_title">MDTP SetupWizard: Initializing...</string>
+    <string name="label_4_1">SetupWizard is blocked because MDTP state is activated</string>
+    <string name="label_4_2">Option A: Keep MDTP activated, but request server authorization</string>
+    <string name="wiz_unblock">Request SetupWizard unblocking from MDTP Services</string>
+    <string name="wiz_cont">Continue (authorized by server)</string>
+    <string name="label_4_3">Option B: Deactivate MDTP (will remove SetupWizard blocking)</string>
+    <string name="wiz_remote">Request Remote MDTP deactivation</string>
+    <string name="wiz_local">Local MDTP deactivation</string>
+    <string name="label_4_4">SetupWizard is allowed to continue because MDTP state is NOT activated</string>
+    <string name="wiz_complete">Complete SetupWizard (MDTP state is not activated)</string>
+    <string name="percent">%</string>
+    <string name="Setup_Wizard">Setup Wizard</string>
+    <string name="label_signup_message">MDTP is currently not activated.\nWould you like to activate it?</string>
+    <string name="label_signup_message_activated">MDTP was activated successfully!</string>
+    <string name="skip_activation">Skip Activation</string>
+    <string name="emergency_dialer">Emergency Dialer</string>
+    <string name="wiz_title_sign_up">MDTP SetupWizard - Sign Up</string>
+    <string name="wiz_title_reset_prot">MDTP SetupWizard - Factory Reset Protection</string>
+    <string name="wiz_title_boot_block">MDTP SetupWizard - Device is Blocked</string>
+    <string name="block_boot_warning_text">MDTP has blocked this device due to internal error.\n\nPlease reboot the device.</string>
+    <string name="start_wifi_wizard">Setup WiFi</string>
+    <string name="default_pin_hint">Default PIN is 11111</string>
+    <string name="pin_dialog_title">MDTP Local Deactivation PIN Required</string>
+    <string name="pin_input_validation_warning">"Input must be 5 digits and numeric"</string>
+
+</resources>

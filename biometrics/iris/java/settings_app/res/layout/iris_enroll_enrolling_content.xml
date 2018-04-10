@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (c) 2015 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+  -->
+
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_gravity="center_horizontal">
+
+	<FrameLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_horizontal">
+	    <com.android.settings.iris.IrisView
+	        android:id="@+id/iris_preview_texture"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:alpha="1.0"/>
+    </FrameLayout>
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:gravity="center_horizontal"
+	    android:orientation="horizontal"
+        android:layout_marginTop="80dp">
+	    <ProgressBar
+	        android:id="@+id/iris_progress_bar"
+	        android:layout_width="150dp"
+	        android:layout_height="150dp"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginRight="110dp"
+	        style="?android:attr/progressBarStyleHorizontal"
+	        android:max="100"
+	        android:progress="0"
+	        android:indeterminate="false"
+	        android:progressDrawable="@drawable/iris_progress_ring"
+	        android:background="@drawable/iris_progress_ring_bg" />
+
+	    <ProgressBar
+	        android:id="@+id/iris_progress_bar1"
+	        android:layout_width="150dp"
+	        android:layout_height="150dp"
+	        android:layout_gravity="center_horizontal"
+	        style="?android:attr/progressBarStyleHorizontal"
+	        android:max="100"
+	        android:progress="0"
+	        android:indeterminate="false"
+	        android:progressDrawable="@drawable/iris_progress_ring"
+	        android:background="@drawable/iris_progress_ring_bg" />
+	</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="300dp"
+            android:clipToPadding="false"
+            android:clipChildren="false">
+            <TextView
+                style="@style/TextAppearance.IrisMessage"
+                android:id="@+id/start_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="1"
+                android:text="@string/security_settings_iris_enroll_start_message"/>
+         </LinearLayout>
+</FrameLayout>

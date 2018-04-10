@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+    <!--
+        Copyright (C) 2015 Qualcomm Technologies, Inc.
+        All Rights Reserved.
+        Qualcomm Technologies Proprietary and Confidential.
+    -->
+    <!--
+        This file stores list of applications which are allowed
+        to do Direct Streaming.
+        This lists the package name of activity.
+
+        Every new entry needs to be in format
+        <Name#>Name of package </Name#>
+        And accordingly count has to be updated.
+    -->
+
+<WhiteListApp>
+    <Count>0</Count>
+    <Name1>com.google.android.youtube</Name2>
+    <Name2>com.android.gallery3d</Name3>
+</WhiteListApp>

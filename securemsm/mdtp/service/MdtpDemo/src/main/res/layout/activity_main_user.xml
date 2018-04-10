@@ -1,0 +1,116 @@
+<!--
+Copyright (c) 2015 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.qualcomm.qti.securemsm.mdtp.MdtpDemo.MainUserActivity">
+
+    <!--TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/title_1_1"
+        android:id="@+id/textView_title_1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" /-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/label_1_1"
+        android:id="@+id/textView_label_1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/state_deactivated"
+        android:id="@+id/textView_mdtp_state"
+        android:layout_alignTop="@+id/textView_label_1"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/configuration"
+        android:id="@+id/button_configuration"
+        android:layout_below="@+id/textView_label_1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentEnd="true"
+        android:onClick="oclConfiguration"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/service_activate"
+        android:id="@+id/button_service_activate"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/button_configuration"
+        android:layout_alignParentStart="true"
+        android:onClick="oclServiceActivate"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/service_deactivate"
+        android:id="@+id/button_service_deactivate"
+        android:layout_below="@+id/button_service_activate"
+        android:layout_marginTop="33dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:onClick="oclServiceDeactivate"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/local_deactivate"
+        android:id="@+id/button_local_deactivate"
+        android:layout_below="@+id/button_service_deactivate"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp"
+        android:layout_alignParentEnd="true"
+        android:onClick="oclLocalDeactivate"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/service_console"
+        android:id="@+id/button_service_console"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textView_mdtp_state"
+        android:onClick="oclServiceConsole"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="oclSetupWizard"
+        android:text="@string/Setup_Wizard"
+        android:visibility="invisible" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar1"
+        android:progressDrawable="@drawable/circular_spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:translationZ="2dp" />
+
+</RelativeLayout>

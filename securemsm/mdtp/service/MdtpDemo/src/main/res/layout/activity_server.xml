@@ -1,0 +1,184 @@
+<!--
+Copyright (c) 2015 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.qualcomm.qti.securemsm.mdtp.MdtpDemo.ServerActivity">
+
+    <TextView android:text="@string/label_3_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/label_3_1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activate"
+        android:id="@+id/button_activate"
+        android:layout_marginTop="31dp"
+        android:layout_alignParentStart="true"
+        android:onClick="oclActivate" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deactivate"
+        android:id="@+id/button_deactivate"
+        android:layout_marginEnd="36dp"
+        android:layout_above="@+id/button_locksim"
+        android:layout_alignEnd="@+id/label_3_1"
+        android:onClick="oclDeactivate" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/locksim"
+        android:id="@+id/button_locksim"
+        android:layout_below="@+id/button_activate"
+        android:layout_alignEnd="@+id/button_activate"
+        android:onClick="oclLockSim" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unlocksim"
+        android:id="@+id/button_unlocksim"
+        android:layout_alignTop="@+id/button_locksim"
+        android:layout_alignEnd="@+id/label_3_1"
+        android:layout_alignStart="@+id/button_deactivate"
+        android:onClick="oclUnlockSim" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/killfunc"
+        android:id="@+id/button_killfunc"
+        android:layout_below="@+id/button_locksim"
+        android:layout_alignStart="@+id/button_locksim"
+        android:onClick="oclKillFunc"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/restorefunc"
+        android:id="@+id/button_restorefunc"
+        android:layout_alignTop="@+id/button_killfunc"
+        android:layout_alignStart="@+id/button_deactivate"
+        android:onClick="oclRestoreFunc"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/label_3_2"
+        android:id="@+id/label_3_2"
+        android:layout_below="@+id/button_restorefunc"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:id="@+id/radio_deactivate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_3_2"
+        android:layout_alignEnd="@+id/button_killfunc"
+        android:onClick="oclAllowDeactivation" >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notallowed"
+            android:id="@+id/radio_notallowed"
+            android:checked="true"
+            android:layout_below="@+id/label_3_2"
+            android:layout_alignEnd="@+id/button_killfunc"
+            android:layout_marginEnd="23dp"
+            android:onClick="oclAllowDeactivation" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/allowed"
+            android:id="@+id/radio_allowed"
+            android:checked="false"
+            android:layout_below="@+id/radio_notallowed"
+            android:layout_alignStart="@+id/radio_notallowed"
+            android:onClick="oclAllowDeactivation" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/label_3_3"
+        android:id="@+id/label_3_3"
+        android:layout_below="@+id/radio_deactivate"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:id="@+id/radio_wizunblock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_3_3"
+        android:layout_alignEnd="@+id/button_killfunc"
+        android:onClick="oclAllowWizUnblock" >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notallowed"
+            android:id="@+id/radio_wiznotallowed"
+            android:checked="true"
+            android:layout_below="@+id/label_3_3"
+            android:layout_alignEnd="@+id/button_killfunc"
+            android:layout_marginEnd="23dp"
+            android:onClick="oclAllowWizUnblock" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/allowed"
+            android:id="@+id/radio_wizallowed"
+            android:layout_below="@+id/radioButton_wiznotallowed"
+            android:layout_alignStart="@+id/radioButton_wiznotallowed"
+            android:checked="false"
+            android:onClick="oclAllowWizUnblock" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/label_3_4"
+        android:id="@+id/textView"
+        android:layout_below="@+id/radio_wizunblock"
+        android:layout_alignParentStart="true" />
+
+    <!--EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/button_killfunc"
+        android:layout_alignParentEnd="true" /-->
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar2"
+        android:progressDrawable="@drawable/circular_spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
